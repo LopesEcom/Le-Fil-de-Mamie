@@ -1,0 +1,6 @@
+# Só a página de vendas vai para o repositório
+/*
+!/.gitignore
+!/index.html
+!/imagens/
+imagens/hotmart/

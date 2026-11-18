@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Fil de Mamie | 101 patrons de sacs au crochet en PDF</title>
+<link rel="icon" type="image/webp" href="imagens/logo.webp">
+<meta name="description" content="101 patrons de sacs au crochet en PDF, avec pas à pas, prêts à réaliser chez vous.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark:#33221a;
+    --dark-2:#271710;
+    --terra:#b5694b;
+    --terra-2:#a2583d;
+    --gold:#d9a54f;
+    --cream:#f8f0e6;
+    --cream-2:#fdf6ec;
+    --tan:#e9c9a3;
+    --tan-2:#f1dcc4;
+    --ink:#2a1a12;
+    --text:#5b4a40;
+    --green:#1ec44f;
+    --green-2:#17ad44;
+    --radius:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+
+  /* Logo / marca */
+  .brand{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:22px}
+  .brand img{width:64px;height:64px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+  .brand span{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:26px;color:#fff7ee;letter-spacing:.01em}
+  .foot-brand{display:flex;justify-content:center;margin-bottom:18px}
+  .foot-brand img{width:56px;height:56px}
+  .foot-brand span{font-size:22px}
+
+  /* Imagens reais dentro das molduras */
+  .hero-img img,.feature-img img,.problem .ph-frame img,.final .ph-frame img{width:100%}
+  .gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+  .step img{border-radius:16px;margin-bottom:16px;width:100%}
+  .quad img{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .bonus img{width:100%;border-radius:16px;margin-bottom:18px;background:#fff}
+  .testi img{width:100%;border-radius:16px}
+  .vip-side img.vip-mock{width:100%}
+  a{color:inherit}
+  h1,h2,h3,h4,.poppins{font-family:'Poppins',sans-serif;color:var(--ink);letter-spacing:-.02em}
+
+  .wrap{width:100%;max-width:620px;margin:0 auto;padding:0 16px}
+  .wrap-lg{width:100%;max-width:1150px;margin:0 auto;padding:0 16px}
+  section{padding:80px 0}
+  .center{text-align:center}
+
+  .eyebrow{font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.01em;color:var(--terra);margin-bottom:10px}
+  .h2{font-size:clamp(32px,4.4vw,48px);font-weight:900;line-height:1.08;margin-bottom:18px}
+  .lead{font-size:17px;max-width:740px;margin:0 auto}
+
+  /* ---------- Placeholders ---------- */
+  .ph{
+    position:relative;width:100%;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    background:
+      repeating-linear-gradient(45deg,rgba(181,105,75,.06) 0 12px,rgba(181,105,75,.12) 12px 24px),
+      #f3e6d6;
+    border:2px dashed rgba(181,105,75,.45);
+    color:#9a6a52;font-family:'Poppins',sans-serif;font-weight:700;font-size:13px;
+    padding:12px;line-height:1.35;
+  }
+  .ph small{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:11px;opacity:.8;margin-top:4px}
+  .r-1x1{aspect-ratio:1/1}
+  .r-4x5{aspect-ratio:4/5}
+  .r-3x4{aspect-ratio:3/4}
+  .r-4x3{aspect-ratio:4/3}
+  .r-16x9{aspect-ratio:16/9}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-block;background:var(--green);color:#fff;text-decoration:none;
+    font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:-.02em;
+    padding:17px 26px;border-radius:999px;
+    box-shadow:0 12px 30px rgba(30,196,79,.35);
+    transition:transform .2s,background .2s,box-shadow .2s;
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  .btn:hover{background:var(--green-2);transform:translateY(-2px);box-shadow:0 16px 34px rgba(30,196,79,.45)}
+  .btn-block{display:block;width:100%;text-align:center}
+  .btn-wrap{text-align:center;margin-top:40px}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+
+  /* ---------- Topbar ---------- */
+  .topbar{background:var(--terra);color:#fff;text-align:center;font-family:'Poppins',sans-serif;font-weight:800;font-size:12px;padding:7px 16px;text-transform:uppercase;letter-spacing:-.01em}
+
+  /* ---------- Dark sections ---------- */
+  .dark{background:linear-gradient(180deg,var(--dark) 0%,var(--dark-2) 100%);color:#f2e6da}
+  .dark h1,.dark h2,.dark h3{color:#fff7ee}
+  .dark .eyebrow{color:var(--gold)}
+
+  /* ---------- Hero (primeira dobra estilo vitrine) ---------- */
+  .hero{position:relative;overflow:hidden;padding:30px 0 56px;text-align:center;background:radial-gradient(ellipse 55% 42% at 50% 0%,rgba(217,165,79,.22),transparent 70%),linear-gradient(180deg,var(--dark) 0%,var(--dark-2) 100%)}
+  .hero .wrap-lg{position:relative;z-index:1}
+  .hero .brand{margin-bottom:16px}
+  .hero .brand img{width:44px;height:44px}
+  .hero .brand span{font-size:20px}
+  .hero h1{font-size:clamp(38px,6.2vw,76px);font-weight:900;line-height:1.02;max-width:920px;margin:0 auto 16px;letter-spacing:-.035em}
+  .hero h1 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:var(--gold);letter-spacing:-.01em;padding-right:.04em}
+  .hero .sub{font-size:18px;color:#efe2d5;max-width:620px;margin:0 auto;line-height:1.55}
+
+  /* Vitrine: o produto no centro e as bolsas que se tecem com ele */
+  .showcase{display:flex;justify-content:center;align-items:center;margin:34px auto 30px}
+  .sc-card{position:relative;flex-shrink:0;border-radius:18px;overflow:hidden;border:4px solid var(--cream-2);background:var(--cream-2);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+  .sc-card img{width:100%;height:100%;object-fit:cover}
+  .sc-card span{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);background:rgba(39,23,16,.86);color:#fff7ee;font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;padding:5px 12px;border-radius:999px;white-space:nowrap}
+  .sc-out{width:180px;height:220px;margin:0 -18px;z-index:1}
+  .sc-in{width:220px;height:270px;margin:0 -22px;z-index:2}
+  .sc-main{width:360px;height:360px;z-index:3;border-radius:24px}
+  .sc-out.l{transform:rotate(-8deg) translateY(20px)}
+  .sc-in.l{transform:rotate(-4deg) translateY(6px)}
+  .sc-in.r{transform:rotate(4deg) translateY(6px)}
+  .sc-out.r{transform:rotate(8deg) translateY(20px)}
+
+  .btn-hero{font-size:17px;padding:19px 34px}
+  .hero-micro{margin-top:16px;font-size:14px;color:#cdbcae}
+
+  /* Bolsas soltas nos cantos */
+  .float{position:absolute;z-index:0;width:150px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:3px solid rgba(253,246,236,.9);box-shadow:0 18px 36px rgba(0,0,0,.45);opacity:.9;animation:drift 7s ease-in-out infinite}
+  .float img{width:100%;height:100%;object-fit:cover}
+  .f1{top:70px;left:3%;rotate:-12deg}
+  .f2{top:110px;right:3%;rotate:10deg;animation-delay:-2s}
+  .f3{bottom:120px;left:5%;rotate:8deg;animation-delay:-4s}
+  .f4{bottom:90px;right:6%;rotate:-9deg;animation-delay:-1s}
+  .f5{bottom:22px;left:24%;width:110px;rotate:-5deg;opacity:.7;animation-delay:-3s}
+  .f6{bottom:30px;right:24%;width:110px;rotate:6deg;opacity:.7;animation-delay:-5s}
+  @keyframes drift{50%{translate:0 -10px}}
+  @media (max-width:1240px){.float{display:none}}
+  @media (max-width:1000px){.sc-out{display:none}}
+  @media (prefers-reduced-motion:reduce){.float{animation:none}}
+
+  .checks{list-style:none;display:inline-block;text-align:left;margin:0 auto}
+  .checks li{position:relative;padding-left:32px;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:#fff7ee;margin-bottom:9px;letter-spacing:-.01em}
+  .checks li::before{content:"\2713";position:absolute;left:4px;top:0;color:var(--gold);font-weight:700}
+
+
+  /* ---------- Gallery ---------- */
+  .gallery-card{max-width:540px;margin:40px auto 0;background:#fff;border-radius:18px;padding:6px;box-shadow:0 20px 50px rgba(80,40,20,.12)}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .gallery .ph{border-radius:10px;font-size:11px}
+
+  /* ---------- Tan section ---------- */
+  .tan{background:linear-gradient(180deg,var(--tan) 0%,var(--tan-2) 100%)}
+  .feature-img{margin:26px 0 22px;border-radius:24px;overflow:hidden;box-shadow:0 25px 50px rgba(120,70,30,.18)}
+  .feature-img .ph{border-radius:24px}
+  .tan p.body{font-size:16px;color:#5b4a40;margin-bottom:22px}
+  .features{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .feat{background:var(--cream-2);border-radius:20px;padding:22px 20px;box-shadow:0 10px 30px rgba(120,70,30,.10);border:1px solid rgba(255,255,255,.7)}
+  .feat h3{font-size:18px;font-weight:800;margin-bottom:6px;line-height:1.3}
+  .feat p{font-size:15.5px;line-height:1.65}
+
+  /* ---------- Problem ---------- */
+  .problem .ph-frame{margin:22px 0;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.2)}
+  .problem .ph-frame .ph{border-radius:24px}
+  .problem p{font-size:16.5px;color:#f2e6da;margin-bottom:16px}
+
+  /* ---------- Steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+  .step{background:#fff;border-radius:22px;padding:16px 16px 22px;text-align:center;box-shadow:0 18px 40px rgba(80,40,20,.08);border:1px solid #f0e2d2}
+  .step .ph{border-radius:16px;margin-bottom:16px}
+  .step .num{font-family:'Poppins',sans-serif;font-weight:800;font-size:12px;color:var(--terra);text-transform:uppercase;margin-bottom:4px}
+  .step h3{font-size:20px;font-weight:800;line-height:1.2;margin-bottom:8px}
+  .step p{font-size:15.5px;line-height:1.65}
+
+  /* ---------- Styles grid ---------- */
+  .styles{display:grid;grid-template-columns:1.28fr 1fr 1fr;grid-template-rows:auto auto;gap:20px;margin-top:40px;align-items:start}
+  .style-card{background:var(--cream-2);border-radius:24px;padding:18px;box-shadow:0 18px 40px rgba(80,40,20,.08);border:1px solid #f5e6d3}
+  .style-card.big{grid-row:1 / span 2;align-self:stretch}
+  .quad{display:grid;grid-template-columns:1fr 1fr;gap:4px;border-radius:14px;overflow:hidden;margin-bottom:16px;border:1px solid #eadbca}
+  .quad .ph{border-radius:0;font-size:11px;border-width:1px}
+  .style-card h3{font-size:19px;font-weight:800;margin-bottom:4px}
+  .style-card p{font-size:16px;line-height:1.65}
+
+  /* ---------- Bonus ---------- */
+  .bonus-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:980px;margin:40px auto 0}
+  .bonus{background:var(--cream-2);border-radius:24px;padding:20px;color:var(--ink);box-shadow:0 20px 50px rgba(0,0,0,.25);text-align:left}
+  .bonus .ph{border-radius:16px;margin-bottom:18px;background-color:#fff}
+  .bonus h3{font-size:19px;font-weight:900;line-height:1.3;margin-bottom:6px;color:var(--ink)}
+  .bonus p{font-size:16.5px;color:#3f3029;margin-bottom:14px}
+  .bonus .val{font-family:'Poppins',sans-serif;font-weight:800;color:var(--terra);font-size:16px}
+  .bonus.premium{max-width:560px;margin:20px auto 0;border:3px solid var(--gold)}
+  .badge{display:inline-block;background:linear-gradient(90deg,var(--terra),var(--gold));color:#fff;font-family:'Poppins',sans-serif;font-weight:800;font-size:12px;padding:8px 12px;border-radius:999px;margin-bottom:12px;text-transform:uppercase}
+
+  /* ---------- Pricing ---------- */
+  .pricing{background:linear-gradient(180deg,var(--cream) 0%,#f3e2cd 100%)}
+  .pay-once{font-size:15px;font-weight:600;color:#7a5a48;margin-top:8px}
+  .plans{display:grid;grid-template-columns:1fr 1.95fr;gap:28px;max-width:1120px;margin:56px auto 0;align-items:stretch}
+  .plan{position:relative;border-radius:26px;padding:28px 24px 30px}
+  .plan h3{font-size:20px;font-weight:900;margin-bottom:4px}
+  .plan .intro{font-size:15px;margin-bottom:18px;line-height:1.5}
+  .plan ul{list-style:none;margin-bottom:22px}
+  .plan ul li{position:relative;padding-left:32px;font-weight:500;color:#4a3a31;font-size:15.5px;margin-bottom:12px;line-height:1.45}
+  .plan ul li::before{content:"\2713";position:absolute;left:0;top:1px;width:21px;height:21px;border-radius:50%;border:1.5px solid #c9b6a4;color:#8a7566;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .from{font-family:'Poppins',sans-serif;font-weight:700;color:#5b4a40;font-size:15px}
+  .from s{color:var(--terra);font-weight:800}
+  .price{display:flex;align-items:flex-end;gap:8px;margin:2px 0 4px}
+  .price .cur{font-family:'Poppins',sans-serif;font-weight:900;color:var(--gold);font-size:36px;line-height:1.6}
+  .price .amt{font-family:'Poppins',sans-serif;font-weight:900;color:var(--terra);font-size:84px;line-height:1;letter-spacing:-.04em}
+  .pay-label{font-family:'Poppins',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#8a7566;margin-bottom:22px}
+
+  /* Básico: discreto, sem destaque (âncora) */
+  .plan.basic{background:rgba(255,255,255,.5);border:1px solid #e3d0bb;display:flex;flex-direction:column}
+  .plan.basic .price .cur{font-size:24px;line-height:1.5;color:#b89a7d}
+  .plan.basic .price .amt{font-size:54px;color:#6b5547}
+  .plan.basic .push{margin-top:auto}
+  .btn-ghost{display:block;text-align:center;text-decoration:none;border:2px solid #cdb8a3;color:#4a3a31;background:transparent;font-family:'Poppins',sans-serif;font-weight:800;font-size:14px;text-transform:uppercase;padding:15px 18px;border-radius:999px;transition:border-color .2s,color .2s}
+  .btn-ghost:hover{border-color:var(--terra);color:var(--terra)}
+
+  /* VIP: destaque total */
+  .plan.vip{background:linear-gradient(180deg,#fff8ef,#f5e2cc);border:3px solid var(--terra);box-shadow:0 30px 70px rgba(150,80,40,.22);padding:38px 30px 30px}
+  .badge-top{position:absolute;top:0;left:50%;transform:translate(-50%,-55%);background:linear-gradient(90deg,var(--terra),var(--gold));color:#fff;font-family:'Poppins',sans-serif;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:8px 18px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 20px rgba(150,80,40,.3)}
+  .vip-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:30px}
+  .plan.vip ul li{font-weight:600;color:var(--ink)}
+  .plan.vip ul li::before{border-color:var(--gold);color:var(--terra);background:#fff6e6}
+  .thumbs{display:flex;align-items:center;margin-bottom:14px}
+  .thumbs img,.thumbs span{width:58px;height:58px;border-radius:14px;border:3px solid #fff;object-fit:cover;margin-left:-14px;box-shadow:0 6px 14px rgba(80,40,20,.18)}
+  .thumbs img:first-child{margin-left:0}
+  .thumbs span{display:flex;align-items:center;justify-content:center;background:var(--dark);color:var(--gold);font-family:'Poppins',sans-serif;font-weight:800;font-size:16px}
+  .vip-what{font-family:'Poppins',sans-serif;font-weight:800;color:var(--ink);font-size:16px}
+  .vip-desc{font-size:15px;margin-bottom:18px;line-height:1.55}
+  .vip-side{border-left:1px solid rgba(181,105,75,.25);padding-left:30px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+  .vip-side .vip-mock{max-width:200px;margin:0 auto 20px;border-radius:18px}
+  .vip-side .pay-label{margin-bottom:6px}
+  .vip-side .price{justify-content:center}
+  .per-unit{font-size:15px;color:#5b4a40;margin-bottom:22px}
+  .secure{font-size:13px;color:#7a6458;margin-top:12px}
+  .total-bonus{font-family:'Poppins',sans-serif;font-weight:800;color:#5b4a40;font-size:16px;margin:4px 0 0}
+  .total-bonus span{color:var(--terra)}
+  .plan-note{text-align:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:13.5px;color:#5b4a40;margin-top:16px;line-height:1.5}
+  .plan-note span{color:var(--terra)}
+  .price-foot{text-align:center;font-size:15px;margin-top:32px}
+
+  /* ---------- Pop-up de upgrade ---------- */
+  .modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(25,14,9,.65);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+  .modal.open{opacity:1;visibility:visible}
+  .modal-box{position:relative;width:100%;max-width:500px;max-height:calc(100vh - 32px);overflow:auto;background:linear-gradient(180deg,#2e1d15,#1f130d);color:#f2e6da;border-radius:24px;padding:34px 30px 24px;border:1px solid rgba(217,165,79,.35);box-shadow:0 40px 90px rgba(0,0,0,.5);transform:translateY(16px) scale(.97);transition:transform .25s}
+  .modal.open .modal-box{transform:none}
+  .modal-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border:0;background:rgba(255,255,255,.07);color:#fff;border-radius:50%;font-size:20px;line-height:1;cursor:pointer}
+  .modal .eyebrow{color:var(--gold);letter-spacing:.2em;margin-bottom:8px}
+  .modal .chose{font-size:15px;color:#d9cabd;margin-bottom:4px}
+  .modal h3{color:#fff;font-size:28px;font-weight:800;line-height:1.15;margin-bottom:16px}
+  .modal h3 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:var(--gold)}
+  .modal .m-intro{font-size:15px;font-weight:600;color:#fff;margin-bottom:12px}
+  .modal ul{list-style:none;margin-bottom:20px}
+  .modal li{position:relative;padding-left:32px;margin-bottom:10px;font-size:15.5px;line-height:1.4}
+  .modal li::before{content:"\2713";position:absolute;left:0;top:0;width:21px;height:21px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .offer-box{background:rgba(255,255,255,.07);border-radius:16px;padding:14px;text-align:center;margin-bottom:18px}
+  .offer-box s{color:#a8968a;font-size:15px}
+  .offer-box b{display:block;font-family:'Poppins',sans-serif;font-weight:800;font-size:22px;color:#fff}
+  .offer-box small{font-size:13px;color:#cdbcae}
+  .modal .btn{animation:none}
+  .decline{display:block;text-align:center;margin-top:16px;color:#cdbcae;font-size:14.5px;text-decoration:underline;text-underline-offset:3px}
+  .decline:hover{color:#fff}
+
+  /* ---------- Guarantee ---------- */
+  .guarantee{background:linear-gradient(180deg,#f7ece0 0%,#efd8bf 100%)}
+  .seal{width:260px;height:260px;margin:24px auto 30px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid #e8d6c2;box-shadow:0 18px 40px rgba(80,40,20,.10)}
+  .seal img{width:100%;height:100%;object-fit:contain;padding:14px}
+  .seal-svg{background:transparent;border:0;box-shadow:none;overflow:visible}
+  .seal-svg svg{display:block;width:100%;height:100%;filter:drop-shadow(0 14px 26px rgba(80,40,20,.22))}
+  .guarantee p{font-size:16.5px;margin-bottom:14px}
+
+  /* ---------- Urgency ---------- */
+  .urgency{background:linear-gradient(180deg,var(--terra) 0%,var(--terra-2) 100%);color:#fff;text-align:center}
+  .urgency .eyebrow{color:var(--gold)}
+  .urgency h2{color:#fff8ef}
+  .urgency p{font-size:17px;margin-bottom:14px}
+  .timer{display:flex;justify-content:center;gap:10px;margin:26px 0 40px}
+  .timer div{background:var(--cream-2);border-radius:14px;width:88px;padding:12px 0 10px;box-shadow:0 10px 24px rgba(0,0,0,.15)}
+  .timer b{display:block;font-family:'Poppins',sans-serif;font-weight:900;font-size:34px;color:var(--ink);line-height:1.1}
+  .timer span{font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;color:#5b4a40;text-transform:uppercase}
+
+  /* ---------- Testimonials ---------- */
+  .testimonials .lead{color:#f2e6da}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+  .testi{background:var(--cream-2);border-radius:24px;padding:12px;box-shadow:0 20px 40px rgba(0,0,0,.25)}
+  .testi .ph{border-radius:16px}
+  /* Depoimentos traduzidos (cartões de texto) */
+  .tcard{padding:26px 22px 22px;text-align:center;color:#4a3830}
+  .tcard img{width:88px;height:88px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:3px solid var(--tan)}
+  .tcard .t-nome{font-family:'Poppins',sans-serif;font-weight:800;font-size:16px;color:var(--ink)}
+  .tcard .t-pais{font-size:13px;color:#8a6e5c;margin-top:2px}
+  .tcard .t-stars{color:#e8862e;font-size:18px;letter-spacing:3px;margin:8px 0 10px}
+  .tcard blockquote{font-style:italic;font-size:15px;line-height:1.6;margin:0}
+  .tcard blockquote b{color:var(--ink)}
+  .tcard .t-trad{font-size:12px;color:#9a806e;margin-top:14px}
+
+  /* Carrossel de fotos de clientes */
+  .marquee{overflow:hidden;margin-top:40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .marquee-track{display:flex;gap:16px;width:max-content;animation:marquee 45s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee img{width:210px;aspect-ratio:9/16;object-fit:cover;border-radius:18px;border:4px solid var(--cream-2);box-shadow:0 16px 34px rgba(0,0,0,.35);flex-shrink:0}
+  @keyframes marquee{to{transform:translateX(calc(-50% - 8px))}}
+  @media (max-width:720px){.marquee img{width:150px;border-width:3px}}
+  @media (prefers-reduced-motion:reduce){.marquee{overflow-x:auto}.marquee-track{animation:none}}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:1120px;margin:40px auto 0}
+  .faq-item{background:#fff;border:1px solid #efd9bf;border-radius:16px;margin-bottom:14px;box-shadow:0 10px 26px rgba(80,40,20,.06);overflow:hidden}
+  .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:0;cursor:pointer;text-align:left;padding:18px 20px;font-family:'Poppins',sans-serif;font-weight:800;font-size:16px;color:var(--ink);letter-spacing:-.01em}
+  .faq-q .ico{color:var(--terra);font-size:22px;font-weight:700;line-height:1;width:20px;text-align:center;flex-shrink:0}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .faq-a p{padding:0 20px 20px;font-size:16px}
+  .faq-item.open .faq-a{max-height:400px}
+
+  /* ---------- Final ---------- */
+  .final .ph-frame{margin:24px 0 26px;border-radius:24px;overflow:hidden}
+  .final .ph-frame .ph{border-radius:24px}
+  .final p.body{font-size:17px;color:#f2e6da;margin-bottom:26px}
+  .final .checks-wrap{text-align:center}
+  footer{padding:70px 16px 40px;text-align:center;font-size:13.5px;color:#d9cabd;line-height:1.95}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:980px){
+    .steps{grid-template-columns:1fr 1fr}
+    .styles{grid-template-columns:1fr 1fr}
+    .style-card.big{grid-row:auto;grid-column:1 / -1}
+    .testi-grid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
+  }
+  @media (max-width:900px){
+    .plans{grid-template-columns:1fr;max-width:560px;row-gap:40px}
+    .plan.vip{order:-1}
+    .vip-grid{grid-template-columns:1fr;gap:22px}
+    .vip-side{border-left:0;padding-left:0;border-top:1px solid rgba(181,105,75,.25);padding-top:24px}
+  }
+  @media (max-width:720px){
+    section{padding:60px 0}
+    .plan.vip{padding:36px 18px 26px}
+    .modal-box{padding:30px 20px 20px}
+    .modal h3{font-size:24px}
+    .hero{padding:22px 0 44px}
+    .hero .sub{font-size:16px}
+    .showcase{margin:24px 0}
+    .sc-main{width:220px;height:220px}
+    .sc-in{width:128px;height:168px;margin:0 -30px}
+    .sc-in span{display:none}
+    .btn-hero{font-size:15px;padding:17px 22px}
+    .hero-micro{font-size:13px}
+    .features,.bonus-grid,.plans,.styles{grid-template-columns:1fr}
+    .bonus.premium{margin-top:20px}
+    .btn{font-size:14px;padding:16px 22px}
+    .price .amt{font-size:72px}
+    .faq-q{font-size:15px}
+  }
+  @media (max-width:520px){
+    .steps{grid-template-columns:1fr}
+    .timer div{width:80px}
+  }
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1718157489881548');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1718157489881548&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z2a2hjip2l");
+</script>
+<!-- End Microsoft Clarity -->
+<!-- Hotmart Launcher -->
+<script id="hotmart_launcher_script">
+			(function(l,a,u,n,c,h,e,r){l['HotmartLauncherObject']=c;l[c]=l[c]||function(){
+			(l[c].q=l[c].q||[]).push(arguments)},l[c].l=1*new Date();h=a.createElement(u),
+			e=a.getElementsByTagName(u)[0];h.async=1;h.src=n;e.parentNode.insertBefore(h,e)
+			})(window,document,'script','//launcher.hotmart.com/launcher.js','hot');
+
+			hot('account','af64780f-785c-3037-883d-d834311fc175');
+		</script>
+<!-- End Hotmart Launcher -->
+</head>
+<body>
+
+<!-- ===== TOPBAR ===== -->
+<div class="topbar">Accès immédiat · Paiement unique · Garantie 30&nbsp;jours</div>
+
+<!-- ===== HERO ===== -->
+<section class="dark hero">
+  <div class="float f1"><img src="imagens/bolsas/bolsa-13.webp" alt=""></div>
+  <div class="float f2"><img src="imagens/bolsas/bolsa-17.webp" alt=""></div>
+  <div class="float f3"><img src="imagens/bolsas/bolsa-19.webp" alt=""></div>
+  <div class="float f4"><img src="imagens/bolsas/bolsa-05.webp" alt=""></div>
+  <div class="float f5"><img src="imagens/bolsas/bolsa-24.webp" alt=""></div>
+  <div class="float f6"><img src="imagens/bolsas/bolsa-15.webp" alt=""></div>
+
+  <div class="wrap-lg">
+    <div class="brand">
+      <img src="imagens/logo.webp" alt="Le Fil de Mamie" width="44" height="44">
+      <span>Le Fil de Mamie</span>
+    </div>
+    <h1>Crochetez des sacs dignes d'une <em>boutique</em></h1>
+    <p class="sub">101 patrons de sacs au crochet en PDF, avec pas à pas, photos, diagrammes et liste du matériel. Ouvrez-les sur votre téléphone et commencez à crocheter dès aujourd'hui.</p>
+
+    <div class="showcase">
+      <div class="sc-card sc-out l"><img src="imagens/bolsas/bolsa-06.webp" alt="Sac moderne au crochet"><span>Sac moderne</span></div>
+      <div class="sc-card sc-in l"><img src="imagens/bolsas/bolsa-16.webp" alt="Sac à main au crochet"><span>Sac à main</span></div>
+      <div class="sc-card sc-main"><img src="imagens/mockup-principal.webp" alt="101 patrons de sacs au crochet en PDF" width="520" height="520" fetchpriority="high"></div>
+      <div class="sc-card sc-in r"><img src="imagens/bolsas/bolsa-01.webp" alt="Pochette au crochet"><span>Pochette</span></div>
+      <div class="sc-card sc-out r"><img src="imagens/bolsas/bolsa-14.webp" alt="Sac bandoulière au crochet"><span>Sac bandoulière</span></div>
+    </div>
+
+    <a href="#planes" class="btn btn-hero">Je veux les 101 patrons pour 9,90&nbsp;€</a>
+    <p class="hero-micro">Accès immédiat par e-mail · Téléphone, tablette ou ordinateur · Paiement unique</p>
+  </div>
+</section>
+
+<!-- ===== MODELOS ===== -->
+<section class="center" style="background:var(--cream)">
+  <div class="wrap-lg">
+    <h2 class="h2" style="max-width:840px;margin-left:auto;margin-right:auto">Découvrez quelques-uns des modèles que vous allez recevoir</h2>
+    <p class="lead">Dans la collection, vous trouverez différents styles de sacs au crochet pour créer des pièces belles, utiles et dignes d'une boutique.</p>
+
+    <div class="gallery-card">
+      <div class="gallery">
+        <img src="imagens/bolsas/bolsa-06.webp" alt="Sac géométrique noir et blanc au crochet" width="720" height="578" loading="lazy">
+        <img src="imagens/bolsas/bolsa-04.webp" alt="Sac à motif granny au crochet" width="720" height="578" loading="lazy">
+        <img src="imagens/bolsas/bolsa-05.webp" alt="Sacs au point popcorn au crochet" width="720" height="578" loading="lazy">
+        <img src="imagens/bolsas/bolsa-13.webp" alt="Tote bag jaune au crochet" width="720" height="578" loading="lazy">
+        <img src="imagens/bolsas/bolsa-17.webp" alt="Sac demi-lune vert au crochet" width="720" height="578" loading="lazy">
+        <img src="imagens/bolsas/bolsa-14.webp" alt="Sac bandoulière rayé avec rabat en cuir" width="720" height="578" loading="lazy">
+        <img src="imagens/bolsas/bolsa-07.webp" alt="Sac à dos marron au crochet" width="720" height="578" loading="lazy">
+        <img src="imagens/bolsas/bolsa-16.webp" alt="Sac jaune avec anses en bambou" width="720" height="578" loading="lazy">
+        <img src="imagens/bolsas/bolsa-19.webp" alt="Sac rose avec nœud au crochet" width="720" height="578" loading="lazy">
+        <img src="imagens/bolsas/bolsa-08.webp" alt="Sac crème au crochet" width="720" height="578" loading="lazy">
+        <img src="imagens/bolsas/bolsa-15.webp" alt="Sac texturé à motif de feuilles au crochet" width="720" height="578" loading="lazy">
+        <img src="imagens/bolsas/bolsa-18.webp" alt="Sacs demi-lune beige et orange" width="720" height="578" loading="lazy">
+      </div>
+    </div>
+
+    <div class="btn-wrap"><a href="#planes" class="btn">Je veux recevoir tous les modèles</a></div>
+  </div>
+</section>
+
+<!-- ===== COLECCION ORGANIZADA ===== -->
+<section class="tan">
+  <div class="wrap">
+    <p class="eyebrow">Collection numérique organisée</p>
+    <h2 class="h2">Tout est organisé dans une seule collection numérique</h2>
+
+    <div class="feature-img">
+      <img src="imagens/mockup-interno-receita.webp" alt="Pages intérieures du PDF avec un patron pas à pas" width="520" height="520" loading="lazy">
+    </div>
+
+    <p class="body">Fini les idées incomplètes, les captures d'écran éparpillées et les liens perdus. Vous recevez une bibliothèque numérique prête à consulter chaque fois que vous voulez réaliser un nouveau sac au crochet.</p>
+
+    <div class="features">
+      <div class="feat"><h3>📘 101 patrons en PDF</h3><p>Des modèles variés de sacs, pochettes, tote bags et sacs bandoulière.</p></div>
+      <div class="feat"><h3>🧶 Pas à pas organisé</h3><p>Des explications faciles à suivre pour avancer en toute confiance.</p></div>
+      <div class="feat"><h3>📊 Diagrammes</h3><p>Des repères visuels pour mieux comprendre chaque pièce.</p></div>
+      <div class="feat"><h3>👜 Photos des modèles</h3><p>Des images des pièces terminées pour visualiser le résultat final.</p></div>
+      <div class="feat"><h3>📏 Mesures et dimensions</h3><p>Des indications pour réaliser chaque sac avec précision.</p></div>
+      <div class="feat"><h3>🧵 Liste du matériel</h3><p>Des suggestions de fils, crochets, anses, bandoulières, fermoirs et accessoires.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEMA ===== -->
+<section class="dark problem">
+  <div class="wrap">
+    <p class="eyebrow">Fini les patrons éparpillés</p>
+    <h2 class="h2">Arrêtez de perdre des heures à chercher des patrons sur Internet</h2>
+
+    <div class="ph-frame">
+      <img src="imagens/antes-depois.webp" alt="Avant&nbsp;: des heures à chercher des patrons. Après&nbsp;: tout est organisé dans une bibliothèque prête à l'emploi" width="1240" height="1240" loading="lazy">
+    </div>
+
+    <p>Vous connaissez sûrement la situation&nbsp;: vous cherchez des idées de sacs au crochet sur Pinterest, YouTube, Google, dans les groupes ou sur les blogs, et vous tombez sur des modèles incomplets, des explications confuses ou des patrons sans tous les détails nécessaires.</p>
+    <p>Avec cette collection, tout est réuni au même endroit. Vous ouvrez, choisissez le modèle, préparez votre matériel et commencez à crocheter, sans recherches interminables.</p>
+
+    <div class="btn-wrap" style="margin-top:28px"><a href="#planes" class="btn">Je veux ma collection de patrons</a></div>
+  </div>
+</section>
+
+<!-- ===== COMO FUNCIONA + ESTILOS ===== -->
+<section class="center" style="background:linear-gradient(180deg,var(--cream) 0%,#f6e9da 60%,#f0dcc6 100%)">
+  <div class="wrap-lg">
+    <p class="eyebrow">Simple à utiliser</p>
+    <h2 class="h2">Comment ça marche</h2>
+    <p class="lead">C'est très simple&nbsp;: vous choisissez le modèle, ouvrez le PDF, préparez votre matériel et commencez à crocheter.</p>
+
+    <div class="steps">
+      <div class="step">
+        <img src="imagens/passo-1-escolha-bolsa.webp" alt="Étape 1&nbsp;: choisissez le sac" width="520" height="520" loading="lazy">
+        <p class="num">Étape 1</p>
+        <h3>Choisissez le sac</h3>
+        <p>Parcourez les modèles et choisissez le style qui vous plaît le plus.</p>
+      </div>
+      <div class="step">
+        <img src="imagens/passo-2-abra-receita.webp" alt="Étape 2&nbsp;: ouvrez le patron" width="520" height="520" loading="lazy">
+        <p class="num">Étape 2</p>
+        <h3>Ouvrez le patron</h3>
+        <p>Accédez au PDF avec les explications du modèle choisi.</p>
+      </div>
+      <div class="step">
+        <img src="imagens/passo-3-separe-materiais.webp" alt="Étape 3&nbsp;: préparez le matériel" width="520" height="520" loading="lazy">
+        <p class="num">Étape 3</p>
+        <h3>Préparez le matériel</h3>
+        <p>Consultez la liste suggérée de fils, crochets et accessoires.</p>
+      </div>
+      <div class="step">
+        <img src="imagens/passo-4-comece-produzir.webp" alt="Étape 4&nbsp;: commencez à crocheter" width="520" height="520" loading="lazy">
+        <p class="num">Étape 4</p>
+        <h3>Commencez à crocheter</h3>
+        <p>Suivez le pas à pas et réalisez votre sac chez vous, en toute confiance.</p>
+      </div>
+    </div>
+
+    <h2 class="h2" style="margin-top:110px">Des sacs pour tous les styles</h2>
+    <p class="lead" style="max-width:700px">La collection réunit des modèles pensés pour différents goûts, occasions et niveaux.</p>
+
+    <div class="styles" style="text-align:left">
+      <div class="style-card big">
+        <div class="quad">
+          <img src="imagens/bolsas/bolsa-21.webp" alt="Sac crème avec chaîne" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-16.webp" alt="Sac jaune avec anses en bambou" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-15.webp" alt="Sac texturé à motif de feuilles" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-19.webp" alt="Sac rose avec nœud" width="720" height="578" loading="lazy">
+        </div>
+        <h3>👜 Sacs à main</h3>
+        <p>Des modèles élégants pour les sorties, les rendez-vous, les fêtes ou le quotidien.</p>
+      </div>
+      <div class="style-card">
+        <div class="quad">
+          <img src="imagens/bolsas/bolsa-24.webp" alt="Sac rayé multicolore" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-06.webp" alt="Sac géométrique noir et blanc" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-10.webp" alt="Sac marron en maille" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-18.webp" alt="Sacs demi-lune beige et orange" width="720" height="578" loading="lazy">
+        </div>
+        <h3>✨ Sacs modernes</h3>
+        <p>Des créations actuelles et colorées, au style de boutique artisanale.</p>
+      </div>
+      <div class="style-card">
+        <div class="quad">
+          <img src="imagens/bolsas/bolsa-02.webp" alt="Tote bag crème au crochet" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-23.webp" alt="Tote bags orange, vert et marron" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-22.webp" alt="Tote bag ajouré jaune" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-13.webp" alt="Tote bag jaune" width="720" height="578" loading="lazy">
+        </div>
+        <h3>♻️ Tote bags au crochet</h3>
+        <p>Des modèles pratiques, durables et parfaits à personnaliser.</p>
+      </div>
+      <div class="style-card">
+        <div class="quad">
+          <img src="imagens/bolsas/bolsa-01.webp" alt="Pochette dorée avec fermoir métallique" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-09.webp" alt="Pochette noire au crochet" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-11.webp" alt="Sac blanc en forme de coquillage" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-20.webp" alt="Pochette mauve au crochet" width="720" height="578" loading="lazy">
+        </div>
+        <h3>👛 Pochettes et clutchs</h3>
+        <p>Des pièces plus petites, délicates, aux finitions raffinées.</p>
+      </div>
+      <div class="style-card">
+        <div class="quad">
+          <img src="imagens/bolsas/bolsa-03.webp" alt="Sac seau bandoulière bicolore" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-14.webp" alt="Sac bandoulière rayé avec rabat en cuir" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-07.webp" alt="Sac à dos marron au crochet" width="720" height="578" loading="lazy">
+          <img src="imagens/bolsas/bolsa-08.webp" alt="Sac d'épaule crème" width="720" height="578" loading="lazy">
+        </div>
+        <h3>🎒 Sacs bandoulière</h3>
+        <p>Des pièces pratiques, modernes et faciles à porter au quotidien.</p>
+      </div>
+    </div>
+
+    <div class="btn-wrap"><a href="#planes" class="btn">Je veux accéder aux 101 modèles</a></div>
+  </div>
+</section>
+
+<!-- ===== BONOS ===== -->
+<section class="dark center">
+  <div class="wrap-lg">
+    <p class="eyebrow">Bonus exclusifs</p>
+    <h2 class="h2" style="max-width:800px;margin-left:auto;margin-right:auto">Vous recevez aussi ces bonus exclusifs avec la formule VIP</h2>
+    <p class="lead" style="color:#f2e6da">Des contenus en plus pour vous aider à réaliser des sacs plus beaux, mieux organisés et mieux finis.</p>
+
+    <div class="bonus-grid">
+      <div class="bonus">
+        <img src="imagens/bonus-1-guia-materiais.webp" alt="Bonus 1&nbsp;: Guide du matériel pour sacs au crochet" width="520" height="520" loading="lazy">
+        <h3>Bonus 1&nbsp;: Guide du matériel pour sacs au crochet</h3>
+        <p>Suggestions de fils, crochets, anses, bandoulières, fermoirs, doublures et accessoires.</p>
+        <span class="val">Valeur&nbsp;: 19&nbsp;€</span>
+      </div>
+      <div class="bonus">
+        <img src="imagens/bonus-2-tabela-pontos-medidas.webp" alt="Bonus 2&nbsp;: Tableau des points et des mesures" width="520" height="520" loading="lazy">
+        <h3>Bonus 2&nbsp;: Tableau des points et des mesures</h3>
+        <p>Un aide-mémoire avec les points de base, les mesures courantes et des conseils.</p>
+        <span class="val">Valeur&nbsp;: 17&nbsp;€</span>
+      </div>
+    </div>
+
+    <div class="bonus premium">
+      <img src="imagens/bonus-3-guia-premium-alcas.webp" alt="Bonus 3&nbsp;: Guide premium des anses, bandoulières et fermoirs" width="520" height="520" loading="lazy">
+      <span class="badge">Bonus premium</span>
+      <h3>Bonus 3&nbsp;: Guide premium des anses, bandoulières et fermoirs</h3>
+      <p>Modèles d'anses, de bandoulières, de chaînes, de fermoirs et d'accessoires pour une finition plus professionnelle.</p>
+      <span class="val">Valeur&nbsp;: 27&nbsp;€</span>
+    </div>
+
+    <div class="bonus premium">
+      <img src="imagens/bonus-4-video-aulas.webp" alt="Bonus 4&nbsp;: Cours vidéo de 12 modèles premium" width="520" height="520" loading="lazy">
+      <span class="badge">Bonus 4</span>
+      <h3>Cours vidéo de 12 modèles premium</h3>
+      <p>Suivez en vidéo quelques-uns des modèles les plus demandés pour avancer plus facilement.</p>
+      <span class="val">Valeur&nbsp;: 47&nbsp;€</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEPOIMENTOS ===== -->
+<section class="dark testimonials center" style="border-top:1px solid rgba(255,255,255,.06)">
+  <div class="wrap-lg">
+    <h2 class="h2" style="max-width:800px;margin-left:auto;margin-right:auto">Elles utilisent déjà ces patrons</h2>
+    <p class="lead">La collection existe déjà en espagnol. Des crocheteuses d'Amérique latine l'utilisent pour choisir leurs modèles, réaliser leurs sacs et avoir toujours de nouvelles idées, sans passer des heures sur Internet.</p>
+  </div>
+
+  <!-- Fotos de clientes em movimento -->
+  <div class="marquee" aria-label="Sacs réalisés par nos clientes">
+    <div class="marquee-track">
+      <img src="imagens/latam-catalogo-01.jpg" alt="Sac au crochet réalisé par une cliente" loading="lazy">
+      <img src="imagens/latam-catalogo-02.jpg" alt="Sac au crochet réalisé par une cliente" loading="lazy">
+      <img src="imagens/latam-catalogo-03.jpg" alt="Sac au crochet réalisé par une cliente" loading="lazy">
+      <img src="imagens/latam-catalogo-04.jpg" alt="Sac au crochet réalisé par une cliente" loading="lazy">
+      <img src="imagens/latam-catalogo-05.jpg" alt="Sac au crochet réalisé par une cliente" loading="lazy">
+      <img src="imagens/latam-catalogo-06.jpg" alt="Sac au crochet réalisé par une cliente" loading="lazy">
+      <img src="imagens/latam-catalogo-07.jpg" alt="Sac au crochet réalisé par une cliente" loading="lazy">
+      <img src="imagens/latam-catalogo-08.jpg" alt="Sac au crochet réalisé par une cliente" loading="lazy">
+      <!-- cópia para o loop contínuo -->
+      <img src="imagens/latam-catalogo-01.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img src="imagens/latam-catalogo-02.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img src="imagens/latam-catalogo-03.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img src="imagens/latam-catalogo-04.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img src="imagens/latam-catalogo-05.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img src="imagens/latam-catalogo-06.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img src="imagens/latam-catalogo-07.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img src="imagens/latam-catalogo-08.jpg" alt="" aria-hidden="true" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Depoimentos reais da versão em espanhol, traduzidos (o país exato de cada cliente ainda não foi informado) -->
+  <div class="wrap-lg">
+    <div class="testi-grid">
+      <div class="testi tcard">
+        <img src="imagens/cliente-1.webp" alt="María del Carmen" width="300" height="300" loading="lazy">
+        <p class="t-nome">María del Carmen</p>
+        <p class="t-pais">Amérique latine · @mariadelcarmen_55</p>
+        <p class="t-stars" aria-label="5 étoiles">★★★★★</p>
+        <blockquote>«&nbsp;J'ai toujours aimé le crochet, mais <b>je n'arrivais jamais à trouver des patrons organisés</b> et je laissais mes projets à moitié faits. Quand j'ai découvert la collection des 101 patrons de sacs au crochet, tout est devenu beaucoup plus simple. Aujourd'hui, je crée de belles pièces pendant mon temps libre et <b>je fais déjà des ventes</b> presque chaque semaine. En plus d'être un revenu complémentaire, c'est redevenu un loisir qui me fait plaisir et me rend fière.&nbsp;»</blockquote>
+        <p class="t-trad">Traduit de l'espagnol</p>
+      </div>
+      <div class="testi tcard">
+        <img src="imagens/cliente-2.webp" alt="Rosa Martínez" width="300" height="300" loading="lazy">
+        <p class="t-nome">Rosa Martínez</p>
+        <p class="t-pais">Amérique latine · @rosamartinez_bh</p>
+        <p class="t-stars" aria-label="5 étoiles">★★★★★</p>
+        <blockquote>«&nbsp;<b>Après ma retraite</b>, je voulais une activité pour occuper mon temps et, qui sait, me rapporter un revenu complémentaire. Les 101 patrons de sacs au crochet étaient exactement ce qu'il me fallait. <b>Les explications sont claires</b>, les modèles sont magnifiques et j'ai toujours de nouvelles idées. Aujourd'hui, je fais des sacs pour les vendre, les offrir et même prendre des commandes. C'est l'une des <b>meilleures décisions</b> que j'ai prises ces dernières années.&nbsp;»</blockquote>
+        <p class="t-trad">Traduit de l'espagnol</p>
+      </div>
+      <div class="testi tcard">
+        <img src="imagens/cliente-3.webp" alt="Juliana Fernández" width="300" height="300" loading="lazy">
+        <p class="t-nome">Juliana Fernández</p>
+        <p class="t-pais">Amérique latine · @ju_fernandez</p>
+        <p class="t-stars" aria-label="5 étoiles">★★★★★</p>
+        <blockquote>«&nbsp;Je passais des heures à chercher des modèles sur Internet, à enregistrer des inspirations et à essayer d'adapter des patrons incomplets. Avec la collection des 101 patrons de sacs au crochet, j'ai enfin trouvé <b>tout au même endroit</b>. Les diagrammes, les mesures et le pas à pas m'ont énormément facilité le travail. En quelques mois, j'ai augmenté ma production et j'ai commencé à <b>recevoir des commandes</b> régulièrement.&nbsp;»</blockquote>
+        <p class="t-trad">Traduit de l'espagnol</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLANES ===== -->
+<section class="pricing" id="planes">
+  <div class="wrap-lg">
+    <div class="center">
+      <p class="eyebrow">Choisissez votre formule</p>
+      <h2 class="h2">Choisissez la formule qui vous convient</h2>
+      <p class="lead" style="max-width:720px">Vous pouvez commencer avec la formule Essentielle ou profiter de la formule VIP complète, avec tous les bonus inclus.</p>
+      <p class="pay-once">Paiement unique. Sans abonnement, sans mensualités, sans prélèvement chaque mois.</p>
+    </div>
+
+    <div class="plans">
+      <!-- BASICO (propositalmente mais discreto) -->
+      <div class="plan basic">
+        <h3>Formule Essentielle</h3>
+        <p class="intro">Pour celles qui veulent seulement les patrons principaux.</p>
+        <p class="from">Pour seulement&nbsp;:</p>
+        <div class="price"><span class="amt">9,90</span><span class="cur">€</span></div>
+        <p class="pay-label">Paiement unique</p>
+        <ul>
+          <li>101 patrons en PDF</li>
+          <li>Modèles de sacs au crochet</li>
+          <li>Photos, diagrammes, mesures et liste du matériel</li>
+          <li>Accès numérique immédiat</li>
+          <li>Accès pendant 1&nbsp;an</li>
+          <li>Garantie de 30&nbsp;jours</li>
+        </ul>
+        <div class="push">
+          <a href="#" class="btn-ghost" data-checkout="basico" id="btn-basico">Je choisis la formule Essentielle</a>
+        </div>
+      </div>
+
+      <!-- VIP -->
+      <div class="plan vip">
+        <span class="badge-top">Le plus choisi</span>
+        <div class="vip-grid">
+          <div class="vip-main">
+            <h3>Formule VIP complète</h3>
+            <p class="intro">Pour celles qui veulent la collection complète avec tous les bonus.</p>
+            <div class="thumbs">
+              <img src="imagens/latam-catalogo-01.jpg" alt="">
+              <img src="imagens/latam-catalogo-04.jpg" alt="">
+              <img src="imagens/latam-catalogo-07.jpg" alt="">
+              <span>101</span>
+            </div>
+            <p class="vip-what">101 patrons + 4 bonus exclusifs</p>
+            <p class="vip-desc">Vous recevez tout le contenu de la formule Essentielle, plus les bonus, les cours vidéo et un accès à vie.</p>
+            <ul>
+              <li>101 patrons de sacs au crochet</li>
+              <li>Photos, diagrammes, mesures et liste du matériel</li>
+              <li>Accès à vie</li>
+              <li>Bonus 1&nbsp;: Guide du matériel</li>
+              <li>Bonus 2&nbsp;: Tableau des points et des mesures</li>
+              <li>Bonus 3&nbsp;: Guide premium des anses, bandoulières et fermoirs</li>
+              <li>Bonus 4&nbsp;: Cours vidéo de 12 modèles premium</li>
+              <li>Garantie de 30&nbsp;jours</li>
+            </ul>
+            <p class="total-bonus">Valeur totale des bonus&nbsp;: <span>110&nbsp;€</span></p>
+          </div>
+
+          <div class="vip-side">
+            <img class="vip-mock" src="imagens/plano-completo.webp" alt="Formule VIP complète avec tous les bonus" width="520" height="520" loading="lazy">
+            <p class="pay-label">Paiement unique</p>
+            <p class="from">Pour seulement&nbsp;:</p>
+            <div class="price"><span class="amt">17</span><span class="cur">€</span></div>
+            <p class="per-unit">Moins de 17&nbsp;centimes par patron.</p>
+            <a href="#" class="btn btn-block" data-checkout="vip">Je choisis la formule VIP complète</a>
+            <p class="secure">🔒 Paiement sécurisé · accès immédiat</p>
+            <p class="plan-note">Pour seulement <span>7,10&nbsp;€</span> de plus que la formule Essentielle, vous recevez tous les bonus et un accès à vie.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="price-foot">Prix en euros. Hotmart affiche le montant final avant le paiement.</p>
+  </div>
+</section>
+
+<!-- ===== GARANTIA ===== -->
+<section class="guarantee">
+  <div class="wrap">
+    <p class="eyebrow">Sans risque</p>
+    <h2 class="h2">Garantie de 30 jours</h2>
+    <div class="seal seal-svg" role="img" aria-label="Garantie de 30 jours">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="or" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f6d98a"/>
+            <stop offset=".5" stop-color="#d9a54f"/>
+            <stop offset="1" stop-color="#a8742c"/>
+          </linearGradient>
+          <path id="arc-haut" d="M 40 100 A 60 60 0 0 1 160 100"/>
+          <path id="arc-bas" d="M 30 100 A 70 70 0 0 0 170 100"/>
+        </defs>
+        <circle cx="100" cy="100" r="96" fill="url(#or)"/>
+        <circle cx="100" cy="100" r="82" fill="#2a1a12"/>
+        <circle cx="100" cy="100" r="77" fill="none" stroke="url(#or)" stroke-width="1.5"/>
+        <text font-family="Poppins,sans-serif" font-weight="800" font-size="15" letter-spacing="3" fill="url(#or)"><textPath href="#arc-haut" startOffset="50%" text-anchor="middle">GARANTIE</textPath></text>
+        <text x="100" y="120" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="900" font-size="58" fill="url(#or)">30</text>
+        <text x="100" y="142" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="800" font-size="16" letter-spacing="4" fill="url(#or)">JOURS</text>
+        <text font-family="Poppins,sans-serif" font-weight="800" font-size="11" letter-spacing="3" fill="url(#or)"><textPath href="#arc-bas" startOffset="50%" text-anchor="middle">SANS RISQUE</textPath></text>
+      </svg>
+    </div>
+    <p>Vous pouvez accéder au contenu et tout parcourir tranquillement. Si la collection ne correspond pas à vos attentes, vous pouvez demander le remboursement pendant la période de garantie.</p>
+    <p><strong style="font-family:'Poppins',sans-serif;color:#4a3830">Aucun risque pour vous.</strong></p>
+    <div class="btn-wrap" style="margin-top:28px"><a href="#planes" class="btn">Je veux y accéder sans risque</a></div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section style="background:var(--cream)">
+  <div class="wrap-lg">
+    <div class="center">
+      <p class="eyebrow">Vos questions</p>
+      <h2 class="h2">Questions fréquentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q">C'est adapté aux débutantes&nbsp;?<span class="ico">-</span></button>
+        <div class="faq-a"><p>Oui. La collection propose des modèles variés, dont des options plus simples pour celles qui débutent. L'idéal est de connaître au moins les points de base du crochet.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Les patrons sont-ils en français&nbsp;?<span class="ico">+</span></button>
+        <div class="faq-a"><p>Oui. Les 101 patrons et les bonus sont en français.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Comment est-ce que je reçois le contenu&nbsp;?<span class="ico">+</span></button>
+        <div class="faq-a"><p>Dès la confirmation du paiement, vous recevez l'accès par e-mail.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Est-ce un produit physique&nbsp;?<span class="ico">+</span></button>
+        <div class="faq-a"><p>Non. C'est un contenu 100&nbsp;% numérique en PDF. Rien n'est envoyé par la poste.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Puis-je imprimer les patrons&nbsp;?<span class="ico">+</span></button>
+        <div class="faq-a"><p>Oui. Vous pouvez imprimer les patrons autant de fois que vous le souhaitez, pour votre usage personnel.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Puis-je y accéder depuis mon téléphone&nbsp;?<span class="ico">+</span></button>
+        <div class="faq-a"><p>Oui. Vous pouvez ouvrir les PDF sur téléphone, tablette ou ordinateur.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Que comprend la formule Essentielle&nbsp;?<span class="ico">+</span></button>
+        <div class="faq-a"><p>Les 101 patrons en PDF avec photos, diagrammes, mesures et liste du matériel, avec un accès pendant 1&nbsp;an.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Que comprend la formule VIP complète&nbsp;?<span class="ico">+</span></button>
+        <div class="faq-a"><p>Les 101 patrons, les 4 bonus exclusifs (Guide du matériel, Tableau des points et des mesures, Guide premium des anses, bandoulières et fermoirs, et Cours vidéo de 12 modèles premium) et un accès à vie.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Puis-je vendre les sacs que je réalise&nbsp;?<span class="ico">+</span></button>
+        <div class="faq-a"><p>Oui. Vous pouvez vendre les pièces que vous réalisez avec les patrons. Il est interdit de revendre ou de partager le contenu numérique.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Le prix est-il en euros&nbsp;?<span class="ico">+</span></button>
+        <div class="faq-a"><p>Oui. Le prix est affiché en euros, et Hotmart indique le montant final avant le paiement.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Y a-t-il une garantie&nbsp;?<span class="ico">+</span></button>
+        <div class="faq-a"><p>Oui. Vous avez 30&nbsp;jours de garantie. Si le contenu ne vous plaît pas, vous pouvez demander le remboursement pendant cette période.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL ===== -->
+<section class="dark final" style="padding-bottom:0">
+  <div class="wrap">
+    <p class="eyebrow">Accès immédiat</p>
+    <h2 class="h2">Recevez maintenant les 101 patrons de sacs au crochet</h2>
+    <div class="ph-frame">
+      <img src="imagens/mockup-final-completo.webp" alt="Collection complète de 101 patrons de sacs au crochet" width="520" height="520" loading="lazy">
+    </div>
+    <p class="body">Accédez tout de suite à une collection numérique complète, avec des modèles organisés pour créer de beaux sacs modernes, à porter, à offrir ou à vendre, sans perdre des heures à chercher des patrons sur Internet.</p>
+    <div class="checks-wrap">
+      <ul class="checks">
+        <li>101 patrons en PDF</li>
+        <li>Modèles de sacs, pochettes et tote bags</li>
+        <li>Photos, diagrammes et mesures</li>
+        <li>Bonus inclus dans la formule VIP</li>
+        <li>Garantie de 30&nbsp;jours</li>
+      </ul>
+    </div>
+    <div class="btn-wrap"><a href="#planes" class="btn">Oui, je veux mes 101 patrons au crochet</a></div>
+  </div>
+  <footer>
+    <div class="brand foot-brand">
+      <img src="imagens/logo.webp" alt="Le Fil de Mamie" width="56" height="56" loading="lazy">
+      <span>Le Fil de Mamie</span>
+    </div>
+    Ce site n'est affilié ni à Facebook, ni à Instagram, ni à Google, ni à TikTok, ni à aucune autre plateforme mentionnée.<br>
+    Le contenu est numérique. L'achat ne garantit pas de résultat précis&nbsp;: les résultats dépendent de chaque personne.<br>
+    Copyright © <span id="year"></span> | Tous droits réservés.
+  </footer>
+</section>
+
+<!-- ===== POP-UP DE UPGRADE (abre ao clicar no Plano Básico) ===== -->
+<div class="modal" id="upsell" role="dialog" aria-modal="true" aria-labelledby="upsell-title">
+  <div class="modal-box">
+    <button class="modal-close" type="button" aria-label="Fermer">&times;</button>
+    <p class="eyebrow">Avant de continuer...</p>
+    <p class="chose">Vous avez choisi la formule Essentielle à 9,90&nbsp;€.</p>
+    <h3 id="upsell-title">Pour seulement 5&nbsp;€ de plus, profitez de la <em>formule VIP complète</em>.</h3>
+    <p class="m-intro">En plus des 101 patrons, vous recevez&nbsp;:</p>
+    <ul>
+      <li>Un accès à vie (au lieu d'1&nbsp;an)</li>
+      <li>Guide du matériel pour sacs</li>
+      <li>Tableau des points et des mesures</li>
+      <li>Guide premium des anses, bandoulières et fermoirs</li>
+      <li>Cours vidéo de 12 modèles premium</li>
+    </ul>
+    <div class="offer-box">
+      <s>17&nbsp;€</s>
+      <b>Maintenant, 14,90&nbsp;€</b>
+      <small>Seulement 5&nbsp;€ de plus que la formule choisie.</small>
+    </div>
+    <a href="#" class="btn btn-block" data-checkout="vipOferta">Oui, je veux la formule VIP complète</a>
+    <a href="#" class="decline" data-checkout="basico">non, je garde la formule Essentielle</a>
+  </div>
+</div>
+
+<script>
+  // LINKS DE CHECKOUT DA HOTMART — trocar os "#" pelos links do produto em francês
+  var CHECKOUT = {
+    basico:    'https://pay.hotmart.com/J108486977H?checkoutMode=10', // Formule Essentielle — 9,90 €
+    vip:       'https://pay.hotmart.com/N108486790G?checkoutMode=10', // Formule VIP — 17 €
+    vipOferta: 'https://pay.hotmart.com/C108486824Y?checkoutMode=10'  // Oferta do pop-up — VIP por 14,90 € (com '#', o pop-up fica desligado)
+  };
+  // O pop-up só aparece quando o link da oferta de 14,90 € estiver preenchido
+  var POPUP_ATIVO = CHECKOUT.vipOferta && CHECKOUT.vipOferta !== '#';
+  // Valores enviados ao Meta Pixel no InitiateCheckout
+  var OFERTA = {
+    basico:    { value: 9.90,  name: 'Formule Essentielle' },
+    vip:       { value: 17,    name: 'Formule VIP complete' },
+    vipOferta: { value: 14.90, name: 'Formule VIP complete (offre pop-up)' }
+  };
+  document.querySelectorAll('[data-checkout]').forEach(function(a){
+    var k = a.dataset.checkout;
+    a.href = CHECKOUT[k];
+    a.addEventListener('click', function(){
+      // com o pop-up ligado, o botão do Básico só abre o pop-up; o evento sai quando a pessoa realmente vai ao checkout
+      if (a.id === 'btn-basico' && POPUP_ATIVO) return;
+      if (window.fbq) fbq('track', 'InitiateCheckout', { value: OFERTA[k].value, currency: 'EUR', content_name: OFERTA[k].name });
+    });
+  });
+
+  // Pop-up: clicar no Básico abre a oferta de upgrade
+  (function(){
+    if (!POPUP_ATIVO) return; // sem link da oferta, o Básico vai direto ao checkout
+    var modal = document.getElementById('upsell');
+    var openBtn = document.getElementById('btn-basico');
+    function open(e){
+      e.preventDefault();
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(function(){ modal.querySelector('.btn').focus(); }, 60);
+    }
+    function close(){
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      openBtn.focus();
+    }
+    openBtn.addEventListener('click', open);
+    modal.querySelector('.modal-close').addEventListener('click', close);
+    modal.addEventListener('click', function(e){ if (e.target === modal) close(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && modal.classList.contains('open')) close(); });
+  })();
+
+  // Ano do rodapé
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // FAQ
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement;
+      var open = item.classList.toggle('open');
+      btn.querySelector('.ico').textContent = open ? '-' : '+';
+    });
+  });
+</script>
+</body>
+</html>
