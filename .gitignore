@@ -1,6 +1,7 @@
-# Só a página de vendas vai para o repositório
+# Só a página de vendas e a área de membros vão para o repositório
 /*
 !/.gitignore
 !/index.html
 !/imagens/
 imagens/hotmart/
+!/membres/
