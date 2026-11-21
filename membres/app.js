@@ -179,13 +179,15 @@
     var pct = Math.round(done.length / P.length * 100);
     var h = '';
     if (pl) {
-      h += '<section class="hero"><img class="hero-img" src="img/flow/hero.webp" alt="" fetchpriority="high">' +
+      var badges = pl === 'vip' ? ['101 patrons en PDF', '4 bonus inclus', 'Accès à vie'] : ['101 patrons en PDF', 'Photos, diagrammes et mesures', 'Accès pendant 1 an'];
+      h += '<section class="hero"><img class="hero-img" src="img/flow/hero-' + pl + '.webp" alt="La collection 101 Patrons de Sacs au Crochet" fetchpriority="high">' +
         '<div class="hero-in"><div class="hero-box"><span class="eyebrow">' + (pl === 'vip' ? 'Formule VIP Complète' : 'Formule Basique') + '</span>' +
         '<h1>Bienvenue dans <em>votre atelier</em></h1>' +
-        '<p class="lead">Vos 101 patrons de sacs au crochet sont ici, avec les photos, les diagrammes, les mesures et la liste du matériel.' + (pl === 'vip' ? ' Vos bonus VIP vous attendent aussi.' : '') + '</p>' +
+        '<p class="lead">Tous vos patrons de sacs au crochet, réunis au même endroit' + (pl === 'vip' ? ', avec vos bonus VIP.' : '.') + ' Choisissez un modèle et commencez dès ce soir.</p>' +
+        '<div class="hero-badges">' + badges.map(function (b) { return '<span>' + esc(b) + '</span>'; }).join('') + '</div>' +
         '<div class="btns"><a class="btn btn-primary" href="#/patron/' + go.n + '">' + I.play + (last ? 'Continuer : ' + esc(last.t) : 'Commencer par le patron n° 1') + '</a>' +
         '<a class="btn btn-ghost" href="#/patrons">Voir les 101 patrons</a></div>' +
-        '<div class="progress"><div class="progress-top"><span>Votre progression</span><span>' + done.length + ' sur ' + P.length + ' terminés</span></div><div class="bar"><i style="width:' + pct + '%"></i></div></div>' +
+        '<div class="progress"><div class="progress-top"><span>Votre progression</span><span><b>' + done.length + '</b> sur ' + P.length + ' sacs terminés</span></div><div class="bar"><i style="width:' + Math.max(pct, 2) + '%"></i></div></div>' +
         '</div></div></section>';
       h += '<div class="wrap"><div class="welcome-note">' + I.spark + '<p><b>Comment ça marche ?</b> Choisissez un patron, lisez-le ici ou ouvrez-le dans Google Drive pour l’imprimer. Quand votre sac est fini, marquez-le comme terminé : votre progression s’enregistre sur cet appareil.</p></div></div>';
       var rec = getJ(K_RECENT, []).map(function (n) { return byN[n]; }).filter(Boolean);
