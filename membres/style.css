@@ -45,6 +45,12 @@ button { font: inherit; cursor: pointer; }
   .brand-mark { width: 32px; height: 32px; font-size: 18px; }
   .topnav a { padding: 8px 10px; }
 }
+@media (max-width: 380px) {
+  .brand-txt b { font-size: 17px; }
+  .topnav { gap: 0; }
+  .topnav a { padding: 8px 7px; font-size: 13.5px; }
+}
+@media (max-width: 340px) { .brand-txt { display: none; } }
 
 /* ---------- hero ---------- */
 .hero { position: relative; min-height: min(84vh, 700px); display: flex; align-items: center; overflow: hidden; background: #170F0C; color: #F6EFE6; }
